@@ -3,13 +3,28 @@
     .basic-grid {
     display: grid;
     gap: 1rem;
-    height: 100vh;
+    height: 10vh;
     width: 100vw;
     overflow: hidden;
     grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+    --stagger-delay: 100ms;
     
 }
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: scale (0.3);
+        filter: hue-rotate(180deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: hue-rotate(0deg)
+    }
+    }
 .card {
+    animation: cardEntrance 700ms ease-out;
+    animation-fill-mode: backwards;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,11 +46,19 @@
  }
   
 .card:hover {
-    background: #0000007b;
+    background: #ffffff7b;
     box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
     transform: translateY(-3px) scale(1.05);
     overflow: hidden;
- }
+    color: rgb(0, 0, 0);
+}
+.card:active {
+    background: #01010180;
+    box-shadow: rgba(212, 244, 31, 0.726) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(.9);
+    overflow: hidden;
+    color: rgb(100, 7, 149);
+}
 }
 
 /* Extra small devices (phones, 768px and down) */
@@ -77,4 +100,19 @@
     transform: translateY(-3px) scale(1.05);
     overflow: hidden;
  }
+ iframe {
+    display: block;
+    margin: 8px;
+    border-width: 2px;
+    border-style: inset;
+    height: 80vh;
+    width: 80vw;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    align-self: stretch;
+    text-align: center;
+}
 }
