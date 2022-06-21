@@ -6,14 +6,32 @@
     <title>New Culture Workshop</title>
     <link rel="icon" type="image/x-icon" href="https://cdn.emojidex.com/emoji/seal/spiral.png?1417140038">
     <link rel="stylesheet" type="text/css" href="css/base.css">
+    <script src="js/overlay.js"></script>
 
   </head>
   <body>  
 
-    <iframe src="/music/2-seconds-and-500-milliseconds-of-silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-      <audio id="player" autoplay loop>
-        <source src="C:\Users\Joey\Documents\GitHub\NCW-Website\root\Rainstorm.mp3" type="audio/mp3">
-      </audio>
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()">overlay</span>
+
+  </div>
+
 
     <nav>
       <section class="basic-grid">
@@ -25,13 +43,12 @@
         <a href="/contact"><div class="card">👽 contact</div></a>
       </section>
     </nav>
-
   </body>
 
 </html>
 
 <!--
   
-  This is a comment. There is nothing here https://ncw.fyi/ 
+  This is a comment. There is nothing here https://newcultureworkshop.space/ 
 
 -->
