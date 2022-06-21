@@ -1,7 +1,7 @@
 /* Text Styles */
 .thesections {
     display: inline-block;
-	text-align: center;
+	text-align: left;
  }
 
 h1 {
@@ -33,3 +33,4 @@ p {
         -ms-hyphens: auto;
         hyphens: auto;
 } 
+
